@@ -1,73 +1,160 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        portfolio
-      </h1>
-      <h2 class="subtitle">
-        My stupendous Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div class="aboutPageBack">
+    <div class="d-flex justify-content-center align-items-center max-about-height">
+      <b-card class="mb-2 customeTransparentCard">
+        <div class="card-header">
+          <span>Who I am ?</span>
+        </div>
+        <p class="card-body-text">I am WEB and MOBILE app developer with 4+ years of experience.</p>
+        <p class="card-body-text">
+          Worked in different oraganization with different domains like Core
+          Banking System, Product LifeCycle Management, Cloud (SAAS).
+        </p>
+        <p class="card-body-text">
+          Created my own E-Commerce website and often working for Freelancing
+          projects.
+        </p>
+      </b-card>
+      <b-card class="mb-2 ml-2 customeTransparentCard">
+        <div class="card-header">
+          <span>Skills</span>
+        </div>
+        <skills :skillsData="skillsData" class="card-body-text"></skills>
+      </b-card>
+    </div>
+    <div class="d-flex align-items-center">
+      <button type="button" class="hireMeButton">
+        <span class="w-100 text-center hireMeButtonText">HIRE ME</span>
+      </button>
+    </div>
+    <div class="right-bottom">
+      <a
+        style="
+          background-color: black;
+          color: white;
+          text-decoration: none;
+          padding: 4px 6px;
+          font-family: -apple-system, BlinkMacSystemFont, 'San Francisco',
+            'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial,
+            sans-serif;
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 1.2;
+          display: inline-block;
+          border-radius: 3px;
+        "
+        href="https://unsplash.com/@karlp?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Download free do whatever you want high-resolution photos from Karl Pawlowicz"
+      >
+        <span style="display: inline-block; padding: 2px 3px;">
+          Image Credit
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              height: 12px;
+              width: auto;
+              position: relative;
+              vertical-align: middle;
+              top: -2px;
+              fill: white;
+            "
+            viewBox="0 0 32 32"
+          >
+            <title>unsplash-logo</title>
+            <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z" />
+          </svg>
+        </span>
+        <span style="display: inline-block; padding: 2px 3px;">Karl Pawlowicz</span>
+      </a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
+import { Component } from "nuxt-property-decorator";
+import skills from "~/components/skills";
+
+import Vue from "vue";
 
 export default Vue.extend({
-  components: {
-    Logo
+  components: { skills },
+  data: function() {
+    return {
+      skillsData: [
+        { name: "Angular 4/8" },
+        { name: "Vue Js" },
+        { name: "Angular Js" },
+        { name: "Vanilla Js" },
+        { name: "Bootstrap" },
+        { name: "Material" },
+        { name: "Node Js" },
+        { name: "Fireabse " },
+        { name: "Java" },
+        { name: "CICD" }
+      ]
+    };
   }
-})
+});
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.aboutPageBack {
+  background-image: url("/back.jpg");
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.right-bottom {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
+.max-about-height {
+  height: 80vh;
+}
+.customeTransparentCard {
+  background: rgba(255, 255, 255, 0.82);
+  max-width: 400px;
+  height: 300px;
+}
+.card-header {
   text-align: center;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 3px 2em;
+  border-bottom: 2px solid #030303;
+  background-color: white;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.card-body-text {
+  padding: 0.4em 1em;
+  font-size: 0.9em;
+  font-weight: 500;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.hireMeButton {
+  background-color: #7976768f !important;
+  border: 2px solid #030303;
+  background-color: white;
+  width: 300px;
+  height: 50px;
+  border-radius: 35px;
+  outline: none;
+  margin: auto;
+  color: black;
 }
-
-.links {
-  padding-top: 15px;
+.hireMeButton:hover {
+  background-color: rgba(69, 62, 62, 0.56078) !important;
+}
+.hireMeButtonText {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
 }
 </style>

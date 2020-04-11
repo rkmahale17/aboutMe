@@ -12,16 +12,16 @@ const store = () =>
       navBarMenuList: {
         isLoading: true,
         items: [
-          { name: "About", url: "/about" },
-          { name: "Contact", url: "/contact" },
-          { name: "Blog", ulr: "/blog" },
-          { name: "Github", url: "/github" }
-        ]
-      }
+          { name: "About", url: "/about", isActiveRoute: false },
+          { name: "Contact", url: "/contact", isActiveRoute: false },
+          { name: "Blog", url: "/blog", isActiveRoute: false },
+          { name: "Github", url: "/github", isActiveRoute: false },
+        ],
+      },
     },
     getters: getters,
     actions: {},
-    mutations: {}
+    mutations: {},
   });
 
 export default store;
