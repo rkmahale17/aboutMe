@@ -11,6 +11,7 @@ import { Component, Prop } from "nuxt-property-decorator";
 import Vue from "vue";
 
 export default Vue.extend({
+  name: "skills",
   components: {},
   data: function() {
     return {};

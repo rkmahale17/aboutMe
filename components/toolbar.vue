@@ -27,6 +27,7 @@ import Vue from "vue";
 import { mapGetters } from "vuex";
 export default Vue.extend({
   components: {},
+  name: "toolbar",
   data: function() {
     return {
       activeHover: false,
@@ -37,7 +38,9 @@ export default Vue.extend({
     ...mapGetters({ getNavBarMenuList: "getNavBarMenuList" })
   },
   created() {
-    this.path = this.$route.path;
+    if (this.$route.path) {
+      this.path = this.$route.path;
+    }
   }
 });
 </script>
