@@ -1,5 +1,5 @@
 module.exports = {
-  mode: "universal",
+  mode: "spa",
   /*
    ** Headers of the page
    */
@@ -11,10 +11,10 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || "",
-      },
+        content: process.env.npm_package_description || ""
+      }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   /*
    ** Customize the progress-bar color
@@ -37,22 +37,21 @@ module.exports = {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    "bootstrap-vue/nuxt",
+    "bootstrap-vue/nuxt"
   ],
   /*
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-
     babel: {
       plugins: [
         ["@babel/plugin-proposal-decorators", { legacy: true }],
-        ["@babel/plugin-proposal-class-properties", { loose: true }],
-      ],
+        ["@babel/plugin-proposal-class-properties", { loose: true }]
+      ]
     },
-    extend(config, ctx) {},
-  },
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
+  }
 };

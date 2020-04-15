@@ -74,11 +74,12 @@
 
 <script lang="ts">
 import { Component } from "nuxt-property-decorator";
-import skills from "~/components/skills";
+import skills from "../components/skills.vue";
 
 import Vue from "vue";
 
 export default Vue.extend({
+  name: "about",
   components: { skills },
   data: function() {
     return {
@@ -92,7 +93,7 @@ export default Vue.extend({
         { name: "Node Js" },
         { name: "Fireabse " },
         { name: "Java" },
-        { name: "CICD" }
+        { name: " http://localhost:3000 " }
       ]
     };
   }

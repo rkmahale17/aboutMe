@@ -9,7 +9,7 @@ import Vue from "vue";
 import toolbar from "~/components/toolbar.vue";
 
 export default Vue.extend({
-  components: { toolbar },
+  components: { toolbar }
 });
 </script>
 
