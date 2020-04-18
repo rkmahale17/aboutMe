@@ -1,0 +1,1 @@
+exports.ids=[2],exports.modules={31:function(t,e,n){"use strict";n.r(e);var o=n(0),r=n.n(o).a.extend({components:{}}),c=n(1);var component=Object(c.a)(r,(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"blogBody"},[])}),[],!1,(function(t){}),null,"27e07393");e.default=component.exports}};

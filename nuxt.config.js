@@ -1,5 +1,6 @@
 module.exports = {
-  mode: "spa",
+  srcDir: "src",
+  buildDir: "functions/.nuxt",
   /*
    ** Headers of the page
    */
@@ -43,6 +44,8 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
+
     babel: {
       plugins: [
         ["@babel/plugin-proposal-decorators", { legacy: true }],
