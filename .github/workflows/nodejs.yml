@@ -19,6 +19,6 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - name: ESLint Action
-      uses: hallee/eslint-action@1.0.1
+     - name: ESLint (JS/TS) Action 
+       uses: iCrawl/action-eslint@v1
 
