@@ -8,16 +8,6 @@
     "dev": "cross-env NODE_ENV=development nodemon src/server/index.js --watch server",
     "start": "cross-env NODE_ENV=production node src/server/index.js",
     "build": "nuxt build",
-    "build:firebase": "yarn clean && yarn build && yarn copy && cd functions && yarn",
-    "clean": "yarn clean:public && yarn clean:functions && yarn clean:static",
-    "clean:functions": "rimraf \"functions/node_modules\" && rimraf \"functions/.nuxt\"",
-    "clean:public": "rimraf \"public/**/*.*!(md)\" && rimraf \"public/_nuxt\"",
-    "clean:static": "rimraf \"src/static/sw.js\"",
-    "copy": "yarn copy:nuxt && yarn copy:static",
-    "copy:nuxt": "mkdir public/_nuxt && cp -r functions/.nuxt/dist/* public/_nuxt",
-    "copy:static": "cp -r src/static/* public",
-    "start:firebase": "firebase serve --only functions,hosting",
-    "deploy": "firebase deploy --only functions,hosting",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
@@ -30,6 +20,7 @@
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "nodemon": "^1.18.9"
   }
 }

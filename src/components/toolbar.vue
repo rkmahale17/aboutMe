@@ -1,9 +1,9 @@
 <template>
   <div class="toolbarBackground">
-    <b-navbar toggleable="lg" class="border-bottom">
+    <b-navbar toggleable="lg" type="dark" class="border-bottom">
       <b-navbar-brand href="#" style="color:white">ABOUT ME</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-      <b-collapse id="nav-collapse" is-nav>
+      <b-collapse id="nav-collapse" is-nav varient="light">
         <b-navbar-nav></b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item
@@ -51,7 +51,7 @@ export default Vue.extend({
 }
 .toolbarMenuBottom {
   width: 60px;
-  text-align: center;
+  text-align: center !important;
   cursor: pointer;
   border-bottom: 4px solid transparent;
   color: rgb(203, 207, 213);
@@ -75,5 +75,8 @@ a:hover {
 .activeRoute {
   border-bottom: 4px solid transparent;
   border-bottom-color: rgb(203, 207, 213);
+}
+::v-deep .navbar-toggler {
+  background: rgb(185, 181, 181) !important;
 }
 </style>

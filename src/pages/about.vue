@@ -1,6 +1,13 @@
 <template>
   <div class="aboutPageBack">
-    <div class="d-flex justify-content-center align-items-center max-about-height">
+    <button type="button" class="hireMeButton">
+      <span class="w-100 text-center hireMeButtonText">HIRE ME</span>
+    </button>
+
+    <div
+      class="d-flex justify-content-center align-items-center flex-wrap mb-4"
+      style="height:100vh"
+    >
       <b-card class="mb-2 customeTransparentCard">
         <div class="card-header">
           <span>Who I am ?</span>
@@ -22,12 +29,8 @@
         <skills :skillsData="skillsData" class="card-body-text"></skills>
       </b-card>
     </div>
-    <div class="d-flex align-items-center">
-      <button type="button" class="hireMeButton">
-        <span class="w-100 text-center hireMeButtonText">HIRE ME</span>
-      </button>
-    </div>
-    <div class="right-bottom">
+
+    <!-- <div class="right-bottom">
       <a
         style="
           background-color: black;
@@ -68,45 +71,38 @@
         </span>
         <span style="display: inline-block; padding: 2px 3px;">Karl Pawlowicz</span>
       </a>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script lang="ts">
-import { Component } from "nuxt-property-decorator";
-import skills from "../components/skills.vue";
-
-import Vue from "vue";
-
-export default Vue.extend({
-  name: "about",
-  components: { skills },
-  data: function() {
-    return {
-      skillsData: [
-        { name: "Angular 4/8" },
-        { name: "Vue Js" },
-        { name: "Angular Js" },
-        { name: "Vanilla Js" },
-        { name: "Bootstrap" },
-        { name: "Material" },
-        { name: "Node Js" },
-        { name: "Fireabse " },
-        { name: "Java" },
-        { name: " http://localhost:3000 " }
-      ]
-    };
+import { Component, Vue } from "nuxt-property-decorator";
+import Skills from "../components/skills.vue";
+@Component({
+  components: {
+    Skills
   }
-});
+})
+export default class About extends Vue {
+  skillsData: Array<any> = [
+    { name: "Angular 4/8" },
+    { name: "Vue Js" },
+    { name: "Angular Js" },
+    { name: "Vanilla Js" },
+    { name: "Bootstrap" },
+    { name: "Material" },
+    { name: "Node Js" },
+    { name: "Fireabse " },
+    { name: "Java" }
+  ];
+}
 </script>
 
 <style>
 .aboutPageBack {
   background-image: url("/back.jpg");
-
   /* Full height */
   height: 100vh;
-
   /* Center and scale the image nicely */
   background-position: bottom;
   background-repeat: no-repeat;
@@ -117,13 +113,10 @@ export default Vue.extend({
   bottom: 20px;
   right: 30px;
 }
-.max-about-height {
-  height: 80vh;
-}
+
 .customeTransparentCard {
   background: rgba(255, 255, 255, 0.82);
   max-width: 400px;
-  height: 300px;
 }
 .card-header {
   text-align: center;
@@ -139,6 +132,10 @@ export default Vue.extend({
   font-weight: 500;
 }
 .hireMeButton {
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  left: calc(50% - 150px);
   background-color: #7976768f !important;
   border: 2px solid #030303;
   background-color: white;
