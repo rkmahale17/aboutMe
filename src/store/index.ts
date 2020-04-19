@@ -15,13 +15,14 @@ const store = () =>
           { name: "About", url: "/about", isActiveRoute: false },
           { name: "Contact", url: "/contact", isActiveRoute: false },
           { name: "Blog", url: "/blog", isActiveRoute: false },
-          { name: "Github", url: "/github", isActiveRoute: false },
-        ],
+          { name: "Github", url: "/github", isActiveRoute: false }
+        ]
       },
+      currentRoutePath: ""
     },
     getters: getters,
-    actions: {},
-    mutations: {},
+    actions: actions,
+    mutations: mutations
   });
 
 export default store;

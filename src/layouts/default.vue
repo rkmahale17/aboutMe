@@ -16,6 +16,12 @@ export default Vue.extend({
 <style>
 html,
 body {
+  background-image: url("/back.jpg");
+  /* Center and scale the image nicely */
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;

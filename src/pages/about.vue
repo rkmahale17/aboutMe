@@ -1,7 +1,11 @@
 <template>
   <div class="aboutPageBack">
     <button type="button" class="hireMeButton">
-      <span class="w-100 text-center hireMeButtonText">HIRE ME</span>
+      <a
+        class="w-100 text-center hireMeButtonText"
+        target="_blank"
+        href="mailTo:coolfrontenddev@gmail.com?subject=Proposal%20for%20freelancing%20&body=Hi%20Rahul,"
+      >Email Me</a>
     </button>
 
     <div
@@ -10,7 +14,7 @@
     >
       <b-card class="mb-2 customeTransparentCard">
         <div class="card-header">
-          <span>Who I am ?</span>
+          <span class="font-weight-bold card-header-name">Who I am ?</span>
         </div>
         <p class="card-body-text">I am WEB and MOBILE app developer with 4+ years of experience.</p>
         <p class="card-body-text">
@@ -24,7 +28,7 @@
       </b-card>
       <b-card class="mb-2 ml-2 customeTransparentCard">
         <div class="card-header">
-          <span>Skills</span>
+          <span class="font-weight-bold card-header-name">Skills</span>
         </div>
         <skills :skillsData="skillsData" class="card-body-text"></skills>
       </b-card>
@@ -76,7 +80,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue, Action } from "nuxt-property-decorator";
 import Skills from "../components/skills.vue";
 @Component({
   components: {
@@ -84,6 +88,10 @@ import Skills from "../components/skills.vue";
   }
 })
 export default class About extends Vue {
+  @Action("updateRouterPathAction") updateRouterPathAction: any;
+  created() {
+    this.updateRouterPathAction(this.$route.path);
+  }
   skillsData: Array<any> = [
     { name: "Angular 4/8" },
     { name: "Vue Js" },
@@ -100,9 +108,8 @@ export default class About extends Vue {
 
 <style>
 .aboutPageBack {
-  background-image: url("/back.jpg");
   /* Full height */
-  height: 100vh;
+  height: 80vh;
   /* Center and scale the image nicely */
   background-position: bottom;
   background-repeat: no-repeat;
@@ -115,16 +122,19 @@ export default class About extends Vue {
 }
 
 .customeTransparentCard {
-  background: rgba(255, 255, 255, 0.82);
   max-width: 400px;
+  background: #2f2f2f;
+  color: white;
+  border-radius: 12px;
 }
 .card-header {
   text-align: center;
   font-size: 0.9em;
   font-weight: 600;
   padding: 3px 2em;
-  border-bottom: 2px solid #030303;
-  background-color: white;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #2f2f2f;
+  color: white;
 }
 .card-body-text {
   padding: 0.4em 1em;
@@ -154,5 +164,9 @@ export default class About extends Vue {
   font-size: 1.5em;
   font-weight: 500;
   color: white;
+}
+.card-header-name {
+  font-size: large;
+  color: rgb(255, 255, 255);
 }
 </style>
