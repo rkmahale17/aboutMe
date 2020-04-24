@@ -13,25 +13,23 @@ export default Vue.extend({
 });
 </script>
 
-<style>
+<style lang="scss">
 html,
 body {
-  background-image: url("/back.jpg");
   /* Center and scale the image nicely */
+  background: $black;
   background-position: bottom;
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: #000000;
 }
 
 *,

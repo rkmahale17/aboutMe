@@ -13,7 +13,8 @@ const store = () =>
         isLoading: true,
         items: [
           { name: "About", url: "/about", isActiveRoute: false },
-          { name: "Contact", url: "/contact", isActiveRoute: false },
+          { name: "Contact Me", url: "/contact", isActiveRoute: false },
+          { name: "Experience", url: "/experience", isActiveRoute: false },
           { name: "Blog", url: "/blog", isActiveRoute: false },
           { name: "Github", url: "/github", isActiveRoute: false }
         ]
