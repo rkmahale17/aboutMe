@@ -1,5 +1,170 @@
-$white: #ffffff;
-$slateGray: #a8b2d1;
-$black: black;
-$lightBlue: #142540;
-$skyBlue: #1cc2ff;
+@import "./variable.scss";
+
+html,
+body {
+  /* Center and scale the image nicely */
+  background: $black;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.round-btn {
+  border: 2px solid $skyBlue;
+  border-radius: 15px;
+  padding: 2px 10px;
+  background: none;
+  color: $slateGray;
+  font-size: 0.8em;
+  width: 150px;
+  margin-top: 15px;
+}
+.mainHeading {
+  color: white;
+  font-size: 2.4em;
+  font-weight: 600;
+  padding: 1rem 0px;
+  margin: 1em 3em;
+  width: 70%;
+}
+.pd-5 {
+  padding-left: 3em;
+}
+.pd-2 {
+  padding-left: 1em;
+}
+.clr-slateGray {
+  color: $slateGray;
+}
+.clr-skyblue {
+  color: $skyBlue;
+}
+.clr-white {
+  color: white;
+}
+
+.font-md {
+  font-size: 0.8em;
+}
+.font-sm {
+  font-size: 0.6em;
+}
+.font-normal {
+  font-size: 1em;
+}
+.border-bottom-gray {
+  border-bottom: 2px solid $slateGray;
+}
+.border-bottom-gray-thin {
+  border-bottom: 2px solid $slateGray;
+}
+.experience__compony-name {
+  max-width: 300px;
+  margin-left: 20px;
+}
+.project_name_box {
+  margin-left: 2.5em;
+  padding-top: 1em;
+}
+.client-box {
+  margin-top: 1em;
+}
+.client_name {
+  width: 100px;
+  border-right: 1px solid $skyBlue;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.domain_name {
+  margin-top: 5px;
+  margin-left: 1em;
+}
+.about_project_box {
+  width: 70%;
+}
+.skills_header {
+  width: 200px;
+}
+.bck-red {
+  background-color: red !important;
+}
+/* Extra small devices (phones, 600px and down) */
+.experience {
+  border-left: 1px solid $slateGray;
+  margin-left: 2em;
+  padding-left: 2em;
+}
+@media only screen and (max-width: 600px) {
+  .mainHeading {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 0.5rem 0px;
+    margin: 0.5em 1.5em;
+  }
+  .experience {
+    border-left: 1px solid $slateGray;
+    margin-left: 0.6em !important;
+    padding-left: 0.6em !important;
+  }
+  .experience__compony-name {
+    max-width: 300px;
+    margin-left: 4px !important;
+  }
+  .project_name_box {
+    margin-left: 0.6em !important;
+  }
+  .pd-5 {
+    padding-left: 0.5em;
+  }
+  .pd-2 {
+    padding-left: 0.2em;
+  }
+  .about_project_box {
+    width: 100% !important;
+  }
+  .skills {
+    width: 160px;
+    max-width: 120px !important;
+    border-radius: 35px !important;
+    border: 1px solid #dee2e6;
+    height: 32px !important;
+    color: white;
+    margin-top: 10px;
+    font-size: 0.7em !important;
+  }
+  .project_locator {
+    left: -1.1em !important;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

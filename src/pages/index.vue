@@ -16,7 +16,7 @@
       >With 4+ years of experience. Worked in different oraganization with different domains like Core Banking System, Product LifeCycle Management, Cloud (SAAS).Created my own E-Commerce website and often working for Freelancing projects.</span>
     </div>
 
-    <div class="row">
+    <div class="row mt-3 mb-3">
       <button class="emailButton">Let's Build Awesome</button>
     </div>
   </div>
@@ -56,5 +56,13 @@ export default Vue.extend({
   font-size: 0.8em;
   font-weight: 600;
   max-width: 600px;
+}
+.emailButton {
+  border: 1px solid #1cc2ff;
+  padding: 0.3em 1em;
+  color: white;
+  background: transparent;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 </style>

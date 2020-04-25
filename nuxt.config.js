@@ -42,7 +42,7 @@ module.exports = {
     "@nuxtjs/style-resources"
   ],
   styleResources: {
-    scss: ["assets/scss/main.scss"]
+    scss: ["assets/scss/main.scss", "assets/scss/variable.scss"]
   },
   /*
    ** Build configuration

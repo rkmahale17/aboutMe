@@ -1,5 +1,6 @@
 <template>
   <div class="toolbarBackground">
+    <SideDesigns />
     <b-navbar toggleable="sm" type="dark">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav varient="light">
@@ -23,10 +24,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Getter } from "nuxt-property-decorator";
-import Logo from "../components/logo.vue";
+import Logo from "../components/Logo.vue";
+import SideDesigns from "../components/SideDesigns.vue";
 
 @Component({
-  components: { Logo }
+  components: { Logo, SideDesigns }
 })
 export default class Toolbar extends Vue {
   @Getter("getNavBarMenuList") getNavBarMenuList: any;

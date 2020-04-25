@@ -1,48 +1,40 @@
 
 <template>
-  <div class="align-items-center justify-content-center d-flex contact-box">
-    <div class="contact-info-box p-4">
-      <div class="row">
-        <div class="col-5 text-left">Mobile No</div>
-        <div class="col-7 text-left">
-          <a>+91 8007610593</a>
-        </div>
-      </div>
-      <div class="row mt-4 px-0">
-        <div class="col-5">
+  <div>
+    <div class="mainHeading">Let's connect To Build Something Awesome</div>
+    <div class="d-flex flex-wrap contact_box_wrapper">
+      <div class="contact-box contact-box-left">
+        <div class="contact_header1">Email</div>
+        <div class="contact_header2">rahulmahale172214@gmail.com</div>
+        <div>
           <button
-            class="info-buttons"
-            v-clipboard:copy="phoneNo"
-            @click="showModal(messageCopyNo)"
-          >Copy No</button>
+            class="round-btn"
+            v-clipboard:copy="mailId"
+            @click="showModal(messageCopyEmail)"
+          >Copy Mail Id</button>
         </div>
-        <div class="col-7">
-          <button class="info-buttons">
-            <a href="tel:8007610593">Call Me</a>
+        <div>
+          <button class="round-btn">
+            <a
+              target="_blank"
+              href="mailTo:rahulmahale172214@gmail.com?subject=Proposal%20for%20freelancing%20&body=Hi%20Rahul,"
+            >Email Me</a>
           </button>
         </div>
       </div>
-      <div class="row mt-4">
-        <div class="col-5 text-left">Email Id</div>
-        <div class="col-7 text-left word-break-all">
-          <a>coolfrontenddev@gmail.com</a>
-        </div>
-      </div>
-
-      <div class="row mt-4 px-0">
-        <div class="col-5">
+      <div class="contact-box contact-box-right">
+        <div class="contact_header1">Mobile No</div>
+        <div class="contact_header2">rahulmahale172214@gmail.com</div>
+        <div>
           <button
-            class="info-buttons"
-            v-clipboard:copy="mailId"
-            @click="showModal(messageCopyEmail)"
-          >Copy Email</button>
+            class="round-btn"
+            v-clipboard:copy="phoneNo"
+            @click="showModal(messageCopyNo)"
+          >Copy Mobile No</button>
         </div>
-        <div class="col-7">
-          <button class="info-buttons">
-            <a
-              target="_blank"
-              href="mailTo:coolfrontenddev@gmail.com?subject=Proposal%20for%20freelancing%20&body=Hi%20Rahul,"
-            >Email Me</a>
+        <div>
+          <button class="round-btn">
+            <a href="tel:8007610593">Call Me</a>
           </button>
         </div>
       </div>
@@ -79,38 +71,28 @@ export default class Contact extends Vue {
 </script>
 
 <style scoped>
-.contact-info-box {
-  background: #2f2f2f;
-  color: white;
-  border-radius: 12px;
-  max-width: 400px;
-
-  width: 60%;
-  max-width: 500px;
-  min-width: 300px;
+.contact-box-left {
+  padding-left: 10%;
 }
-.info-buttons {
-  color: white;
-  width: 100px;
-  background: black;
-  border: none;
-  border-radius: 20px;
-  padding: 4px;
-}
-.word-break-all {
-  word-break: break-word;
+.contact-box-right {
+  padding-left: 10%;
 }
 .contact-box {
-  height: 80vh;
+  flex: 1;
 }
-.success-infoBox {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px;
-  background: #2f2f2f;
+.contact_box_wrapper {
+  margin-top: 10px;
+}
+.contact_header1 {
+  padding: 10px 0px;
+  color: slateGray;
+  border-bottom: 1px solid gray;
+  width: 200px;
+}
+.contact_header2 {
   color: white;
-  border-radius: 12px;
-  width: 400px;
+  padding: 20px 0px 0px 0px;
+  font-size: 0.8em;
+  margin-top: 10px;
 }
 </style>

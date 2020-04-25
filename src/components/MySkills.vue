@@ -1,12 +1,12 @@
 <template>
-  <div class="m-auto mt-3 row">
+  <div class="mt-3 row skills_box">
     <div
-      class="skills ml-2 mt-2 col-lg-5 col-sm-5 col-xl-5 col-md-5 col-10 text-center"
+      class="skills ml-2 text-center"
       style="line-height:30px"
       v-for="(item, index) in skillsData"
       :key="index"
     >
-      <span class="w-100 skillsText">{{ item.name }}</span>
+      <span class="w-100 skillsText">{{ item }}</span>
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@ import { State, Action, Getter } from "vuex-class";
 
 import { mapActions } from "vuex";
 @Component
-export default class Skills extends Vue {
+export default class MySkills extends Vue {
   @Prop() skillsData!: [];
 }
 // export default Vue.extend({
@@ -32,12 +32,18 @@ export default class Skills extends Vue {
 
 <style scoped>
 .skills {
-  width: 150px;
+  width: 200px;
+  max-width: 150px;
   border-radius: 35px;
-  border: 2px solid #dee2e6;
+  border: 1px solid #dee2e6;
   height: 35px;
+  color: white;
+  margin-top: 10px;
 }
 .skills:hover {
   background: rgb(58, 57, 57);
+}
+.skills_box {
+  max-width: 700px;
 }
 </style>
