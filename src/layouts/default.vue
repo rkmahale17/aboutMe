@@ -6,7 +6,7 @@
 </template>
 <script>
 import Vue from "vue";
-import Toolbar from "~/components/toolbar.vue";
+import Toolbar from "~/components/Toolbar.vue";
 
 export default Vue.extend({
   components: { Toolbar }
@@ -14,4 +14,5 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+.mi{ padding : 20px;}
 </style>
