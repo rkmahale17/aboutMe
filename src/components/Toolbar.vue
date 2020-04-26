@@ -11,7 +11,7 @@
             v-for=" (item,index) in getNavBarMenuList"
             :class="{activeRoute : (item.url === getCurrentRouterPath.path)}"
             :key="index"
-            :href="item.name !=='Github'? item.url : 'https:/github.com/rkmahale17/'"
+            @click="openView(item.name , item.url)"
           >{{item.name}}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -35,6 +35,13 @@ export default class Toolbar extends Vue {
   @Getter("getCurrentRouterPath") getCurrentRouterPath: any;
   goTOGithub() {
     window.open("https:/github.com/rkmahale17/");
+  }
+  openView(viewName: string, viewUrl: string) {
+    if (viewName !== "Github") {
+      this.$router.push(viewUrl);
+    } else {
+      this.goTOGithub();
+    }
   }
 }
 </script>
