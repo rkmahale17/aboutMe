@@ -3,7 +3,7 @@ import Vue from "vue";
 import actions from "./actions";
 import mutations from "./mutations";
 import getters from "./getters";
-
+export const strict = false;
 Vue.use(Vuex);
 
 const store = () =>

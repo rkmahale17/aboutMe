@@ -1,7 +1,7 @@
 <template>
   <div class="toolbarBackground">
     <SideDesigns />
-    <b-navbar toggleable="sm" type="dark">
+    <b-navbar toggleable="md" type="dark">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav varient="light">
         <b-navbar-nav></b-navbar-nav>
@@ -46,8 +46,6 @@ export default class Toolbar extends Vue {
   border-bottom: 2px solid transparent;
   color: $slateGray;
   font-size: 0.8em;
-  max-width: 120px;
-  min-width: 100px;
 }
 .toobarMenuBottoBorder:hover {
   border-bottom-color: $skyBlue;

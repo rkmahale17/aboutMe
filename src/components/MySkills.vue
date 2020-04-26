@@ -6,7 +6,7 @@
       v-for="(item, index) in skillsData"
       :key="index"
     >
-      <span class="w-100 skillsText">{{ item }}</span>
+      <span class="w-100 skillsText font-md">{{ item }}</span>
     </div>
   </div>
 </template>
@@ -32,9 +32,9 @@ export default class MySkills extends Vue {
 
 <style scoped>
 .skills {
-  width: 200px;
-  max-width: 150px;
-  border-radius: 35px;
+  width: 110px;
+  max-width: 110px;
+  border-radius: 25px;
   border: 1px solid #dee2e6;
   height: 35px;
   color: white;
@@ -44,6 +44,6 @@ export default class MySkills extends Vue {
   background: rgb(58, 57, 57);
 }
 .skills_box {
-  max-width: 700px;
+  max-width: 550px;
 }
 </style>

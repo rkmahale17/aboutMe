@@ -35,11 +35,14 @@ body {
   width: 150px;
   margin-top: 15px;
 }
+.round-btn:hover {
+  background: #32302e;
+}
 .mainHeading {
   color: white;
   font-size: 2.4em;
   font-weight: 600;
-  padding: 1rem 0px;
+  padding: 1rem 0px 0px 0.8rem;
   margin: 1em 3em;
   width: 70%;
 }
@@ -151,6 +154,38 @@ body {
   }
   .project_locator {
     left: -1.1em !important;
+  }
+  .aboutSkills {
+    width: 300px !important;
+  }
+  .profileImage {
+    margin: auto !important;
+    float: none !important;
+  }
+  .about {
+    padding: 100px 0px !important;
+  }
+  .skills_box {
+    max-width: 90% !important;
+  }
+  .header4 {
+    max-width: 85% !important;
+    margin-top: 5% !important;
+  }
+  .header1 {
+    color: $skyBlue;
+    font-size: 0.8em;
+  }
+  .header2 {
+    color: white;
+    font-size: 1.4em !important;
+    font-weight: 600;
+    padding: 0.5rem 0px !important;
+  }
+  .header3 {
+    color: $slateGray;
+    font-size: 1.4em !important;
+    font-weight: 600;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */

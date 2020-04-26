@@ -2,8 +2,8 @@
 <template>
   <div>
     <div class="mainHeading">Let's connect To Build Something Awesome</div>
-    <div class="d-flex flex-wrap contact_box_wrapper">
-      <div class="contact-box contact-box-left">
+    <div class="d-flex flex-wrap justify-content-center contact_box_wrapper">
+      <div class="contact-box contact-box-left m-4">
         <div class="contact_header1">Email</div>
         <div class="contact_header2">rahulmahale172214@gmail.com</div>
         <div>
@@ -22,9 +22,9 @@
           </button>
         </div>
       </div>
-      <div class="contact-box contact-box-right">
+      <div class="contact-box contact-box-right m-4">
         <div class="contact_header1">Mobile No</div>
-        <div class="contact_header2">rahulmahale172214@gmail.com</div>
+        <div class="contact_header2">+91- 8007610593</div>
         <div>
           <button
             class="round-btn"
@@ -72,13 +72,14 @@ export default class Contact extends Vue {
 
 <style scoped>
 .contact-box-left {
-  padding-left: 10%;
 }
 .contact-box-right {
-  padding-left: 10%;
 }
 .contact-box {
-  flex: 1;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  background: #110d0d;
 }
 .contact_box_wrapper {
   margin-top: 10px;
@@ -87,7 +88,8 @@ export default class Contact extends Vue {
   padding: 10px 0px;
   color: slateGray;
   border-bottom: 1px solid gray;
-  width: 200px;
+  width: 150px;
+  text-align: center;
 }
 .contact_header2 {
   color: white;
