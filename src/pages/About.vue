@@ -84,7 +84,7 @@ export default class About extends Vue {
       rgba(31, 179, 172, 0.5),
       rgba(0, 15, 200, 0.32)
     ),
-    url(/_nuxt/src/static/profile.png);
+    url(../static/profile.png);
   margin: 10px;
   width: 200px;
   height: 200px;

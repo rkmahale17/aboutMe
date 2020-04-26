@@ -72,8 +72,10 @@ export default class Contact extends Vue {
 
 <style scoped>
 .contact-box-left {
+  width: 260px;
 }
 .contact-box-right {
+  width: 260px;
 }
 .contact-box {
   border: 1px solid #ffffff;
