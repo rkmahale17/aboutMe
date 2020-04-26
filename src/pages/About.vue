@@ -86,8 +86,8 @@ export default class About extends Vue {
     ),
     url(../static/profile.png);
   margin: 10px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 300px;
   float: left;
   background-size: cover;
   vertical-align: middle;
@@ -97,7 +97,7 @@ export default class About extends Vue {
   width: 350px;
 }
 .maxSkill {
-  width: 160px;
+  width: 150px;
 }
 .maxSkill:before {
   content: " ";

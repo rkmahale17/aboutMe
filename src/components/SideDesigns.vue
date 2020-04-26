@@ -23,7 +23,7 @@ export default class SideDesigns extends Vue {}
   top: 60%;
 }
 .side-design__right {
-  border-left: 4px solid skyBlue;
+  border-left: 4px solid $skyBlue;
   background: white;
   height: 20%;
   position: absolute;

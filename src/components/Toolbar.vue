@@ -53,6 +53,11 @@ export default class Toolbar extends Vue {
   border-bottom: 2px solid transparent;
   color: $slateGray;
   font-size: 0.8em;
+  max-width: 150px;
+}
+.toolbarMenuBottom > a {
+  text-align: left;
+  max-width: 200px;
 }
 .toobarMenuBottoBorder:hover {
   border-bottom-color: $skyBlue;
@@ -66,7 +71,6 @@ a {
 a:hover {
   text-decoration: none; /* no underline */
   color: white;
-  padding: 0px 15px !important;
 }
 
 .activeRoute {
