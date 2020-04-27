@@ -1,6 +1,6 @@
-# portfolio
+# Portfolio
 
-> My slick Nuxt.js project
+> My Portfolio Website
 
 ## Build Setup
 
