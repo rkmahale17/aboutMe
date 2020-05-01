@@ -36,14 +36,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  routerBase:
-    process.env.DEPLOY_ENV === "GH_PAGES"
-      ? {
-          router: {
-            base: "/aboutMe/"
-          }
-        }
-      : {},
+  router: { base: "/portfolio/" },
   modules: [
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
