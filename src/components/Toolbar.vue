@@ -1,5 +1,5 @@
 <template>
-  <div class="toolbarBackground">
+  <div class="toolbarBackground mt-3 ml-3">
     <SideDesigns />
     <b-navbar toggleable="md" type="dark">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

@@ -7,28 +7,32 @@
         </div>
       </div>
       <div class="about_section_1">
-        <div class="font-md py-2 mx-2">
+        <div class="font-md py-2 mx-4">
           <span>Hi, my name is Rahul Mahale. Software Engineer at Pune, India</span>
         </div>
-        <div class="font-md py-2 mx-2">
+        <div class="font-md py-2 mx-4">
           <span>
             I enjoy building everything from small business site to modern UX interactive web applications. My aim is provide
             bug free (approximate you can say), perfromant experience web application.
           </span>
         </div>
-        <div class="font-md py-2 mx-2">
+        <div class="font-md py-2 mx-4">
           <span>
             For last five years am working on one of important and meaningfull projetcs in field of Investment Banking, Cloud Apps and
             Product Life Cycle Management.
           </span>
         </div>
 
-        <div class="font-md py-2 mx-2">
+        <div class="font-md py-2 mx-4">
           <span>Techonlogy I have been working recently</span>
         </div>
 
-        <div class="d-flex flex-wrap ml-3 aboutSkills mx-2">
-          <div v-for="(item,index) in skills " :key="index" class="font-md pl-2 maxSkill">{{item}}</div>
+        <div class="d-flex flex-wrap ml-3 aboutSkills mx-4">
+          <div
+            v-for="(item,index) in skills "
+            :key="index"
+            class="font-md pl-2 maxSkill mx-4"
+          >{{item}}</div>
         </div>
       </div>
     </div>
