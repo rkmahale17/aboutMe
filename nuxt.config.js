@@ -4,12 +4,9 @@ module.exports = {
   /*
    ** Headers of the page
    */
-  router: () => {
-    process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-      router: {
-        base: 'https://github.com/rkmahale17/aboutMe'
-      }
-    } : {}
+
+  router: {
+            base: "/aboutMe/"
   },
 
 
