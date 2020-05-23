@@ -15,7 +15,7 @@
           >{{item.name}}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
-      <b-navbar-brand class="ml-auto" href="/" style="color:white">
+      <b-navbar-brand class="ml-auto" href="/aboutMe" style="color:white">
         <Logo></Logo>
       </b-navbar-brand>
     </b-navbar>
