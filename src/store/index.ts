@@ -15,7 +15,8 @@ const store = () =>
           { name: "About", url: "/about", isActiveRoute: false },
           { name: "Contact Me", url: "/contact", isActiveRoute: false },
           { name: "Experience", url: "/experience", isActiveRoute: false },
-          { name: "Blog", url: "/blog", isActiveRoute: false }        ]
+          { name: "Blog", url: "/blog", isActiveRoute: false }
+        ]
       },
       currentRoutePath: ""
     },

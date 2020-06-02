@@ -13,6 +13,14 @@
             :key="index"
             @click="openView(item.name , item.url)"
           >{{item.name}}</b-nav-item>
+
+          <a
+            href="Rahul_MAHALE_Resume.pdf"
+            rel="nofollow noopener noreferrer"
+            class="ml-2 noBullet toolbarMenuBottom toobarMenuBottoBorder pb-0 txt-align-left"
+            target="_blank"
+            download
+          >Resume</a>
         </b-navbar-nav>
       </b-collapse>
       <b-navbar-brand class="ml-auto" href="/aboutMe" style="color:white">
@@ -26,7 +34,7 @@
 import { Component, Prop, Vue, Watch, Getter } from "nuxt-property-decorator";
 import Logo from "../components/Logo.vue";
 import SideDesigns from "../components/SideDesigns.vue";
-
+import Axios from "axios";
 @Component({
   components: { Logo, SideDesigns }
 })
@@ -36,11 +44,26 @@ export default class Toolbar extends Vue {
   goTOGithub() {
     window.open("https:/github.com/rkmahale17/");
   }
+  downloadResume(url: any, label: string) {
+    Axios.get(url, { responseType: "blob" })
+      .then(response => {
+        const blob = new Blob([response.data], { type: "application/pdf" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = label;
+        link.click();
+        URL.revokeObjectURL(link.href);
+      })
+      .catch(console.error);
+  }
+
   openView(viewName: string, viewUrl: string) {
-    if (viewName !== "Github") {
+    if (viewName !== "Resume") {
       this.$router.push(viewUrl);
     } else {
-      this.goTOGithub();
+      const url = "/resume.pdf";
+      const label = "Rahul Mahale Resume";
+      this.downloadResume(url, label);
     }
   }
 }
