@@ -18,7 +18,7 @@
         </div>
         <div class="font-md py-2 mx-4">
           <span>
-            For last five years am working on one of important and meaningfull projetcs in field of Investment Banking, Cloud Apps and
+            For last six years am working on one of important and meaningfull projetcs in field of Investment Banking, Cloud Apps and
             Product Life Cycle Management.
           </span>
         </div>
@@ -55,7 +55,7 @@ export default class About extends Vue {
   skillsData: Array<any> = ["Angular 4/8"];
 
   skills = [
-    "Angular 8 ",
+    "Angular Upto 14V ",
     "Vue Js",
     "TypeScript",
     "React Js",
@@ -88,7 +88,7 @@ export default class About extends Vue {
       rgba(31, 179, 172, 0.5),
       rgba(0, 15, 200, 0.32)
     ),
-    url(../static/profile.png);
+    url(../static/profile.JPG);
   margin: 10px;
   width: 250px;
   height: 300px;

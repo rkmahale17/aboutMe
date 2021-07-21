@@ -46,6 +46,53 @@ import { Component, Prop, Vue, Getter, Action } from "nuxt-property-decorator";
 })
 export default class Logo extends Vue {
   experience = [
+            {
+      compony_name: "Schlumberger",
+      projects: [
+        {
+          number: "01",
+          project_name: " DELFI DATA MANAGEMENT PORTAL",
+          domain: "Oil Industry",
+          client: "Own Product",
+          about:
+            "DELFI Data management is biggest open source project in OIL industry which will librate data and provide into form OSDU data storage. When any oil industry goes for digging oil well there are tons of paramter they need consider before starting work. So Schlumberger is providing that quality of data by applying AI powered logics in it.",
+          role:
+            "I am working as a UI Developer who is working on create Angular 12,14 components, my daily work includes understading business requirement to adding feature to PROD",
+          skills: [
+            "Angular 14~",
+            "AZURE",
+            "TypeScript",
+            "GIT",
+            "SCSS",
+            "VSCODE"
+          ]
+        }
+      ]
+    },
+        {
+      compony_name: "Aegon Life",
+      projects: [
+        {
+          number: "01",
+          project_name: "SARAL BIMA",
+          domain: "Insurance",
+          client: "Own Prouct",
+          about:
+            "To simplify the procedure of buying a term insurance plan of customer, India Govt. Mandate to create policy named as SARAL, developed in REACT JS, STENCIL JS and JAVA.",
+          role:
+            "In this prject we were creating reusable component using STENSIL JS and usign them into VUE3 project. I was working as senior ui developer role, in which I had to take care of project architecture and code qulity we push.",
+          skills: [
+            "Stensil Js",
+            "AWS",
+            "JAVA",
+            "TypeScript",
+            "VUE 3",
+            "SCSS",
+            "VSCODE"
+          ]
+        }
+      ]
+    },
     {
       compony_name: "Mobile Programming LLC",
       projects: [
@@ -59,7 +106,7 @@ export default class Logo extends Vue {
           role:
             "I am creating web components here by using Angular 8 which is using fully modern approach of js, maintainable, production cable and almost bug free code",
           skills: [
-            "Angular 8",
+            "Angular Upto 14V",
             "AWS",
             "JAVA",
             "TypeScript",
