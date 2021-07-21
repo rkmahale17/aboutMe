@@ -6,7 +6,7 @@ module.exports = {
    */
 
   router: {
-            base: "/aboutMe/"
+            base: "/"
   },
 
 
